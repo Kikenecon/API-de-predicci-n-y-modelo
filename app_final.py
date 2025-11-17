@@ -42,7 +42,7 @@ app = Flask(__name__)
 with open('modelo_carros.pkl', 'rb') as f:
     modelo_cargado = pickle.load(f)
 
-@app.route('/predict', methods=['POST'])
+@app.route('/prediccion', methods=['POST'])
 def predict_price():
     data = request.get_json()
     year = float(data.get('year', 0))
