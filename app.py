@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 
 # Cargar modelo (archivo 'modelo_carros.pkl' en el repo)
-MODEL_PATH = os.path.join(os.path.dirname(__file__), 'modelo_carros.pkl')
+MODEL_PATH = 'modelo_carros.pkl'  # directo, porque Railway lo pone en el directorio de trabajo
 with open(MODEL_PATH, 'rb') as f:
     modelo_cargado = pickle.load(f)
 
